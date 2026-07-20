@@ -1,1 +1,82 @@
-/* Estilos Home */
+.home-container {
+  max-width: 900px;
+}
+
+.welcome-title {
+  font-size: 1.8rem;
+  margin-bottom: 28px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dash-card {
+  background-color: #262626;
+  border-radius: 12px;
+  padding: 20px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #333333;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-icon {
+  font-size: 2rem;
+}
+
+.card-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #cccccc;
+}
+
+.card-info h2 strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-dash {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+.btn-secondary {
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #4a4a4a;
+}
+
+.btn-primary {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #666666;
+}
