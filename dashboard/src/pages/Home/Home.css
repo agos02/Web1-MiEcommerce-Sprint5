@@ -1,65 +1,82 @@
+/* ==========================================
+   CONTENEDOR PRINCIPAL DE HOME
+   ========================================== */
 .home-container {
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Título principal en blanco bien visible */
-.home-title {
-  font-size: 2rem;
-  color: #ffffff !important;
-  margin: 0 0 8px 0;
-  font-weight: 600;
-}
-
-/* Tarjeta contenedora */
-.dashboard-card {
-  background-color: #262626;
-  border-radius: 14px;
-  padding: 24px 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
+  padding: 32px;
+  flex: 1;
+  background-color: #121212;
+  color: #ffffff;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
-/* Títulos dentro de las tarjetas */
+.home-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #ffffff !important;
+}
+
+/* ==========================================
+   TARJETAS DEL DASHBOARD
+   ========================================== */
+.dashboard-card {
+  background-color: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  transition: border-color 0.2s;
+}
+
+.dashboard-card:hover {
+  border-color: #444444;
+}
+
+/* INFORMACIÓN DE LA TARJETA */
 .card-info h2 {
-  margin: 0 0 6px 0;
-  color: #ffffff !important; /* Fuerza color blanco */
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .card-info p {
-  margin: 0;
-  color: #cccccc !important; /* Gris claro legible */
   font-size: 0.9rem;
+  color: #ffffff !important;
+  margin: 0;
 }
 
-/* Botones originales */
+/* ==========================================
+   BOTONES DE ACCIÓN (Ver listado / Agregar)
+   ========================================== */
 .card-actions {
   display: flex;
   gap: 12px;
 }
 
 .btn-dashboard {
-  padding: 10px 22px;
-  background-color: #3e3e3e;
+  background-color: #2a2a2a;
   color: #ffffff !important;
-  text-decoration: none;
+  padding: 10px 18px;
   border-radius: 20px;
+  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: background-color 0.2s;
-  display: inline-block;
-  white-space: nowrap;
+  transition: background-color 0.2s, border-color 0.2s;
+  border: 1px solid #3a3a3a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-dashboard:hover {
-  background-color: #505050;
+  background-color: #383838;
+  border-color: #555555;
 }

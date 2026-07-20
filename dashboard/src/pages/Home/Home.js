@@ -4,12 +4,12 @@ import productsData from '../../data/products.json';
 import './Home.css';
 
 const Home = () => {
-  const totalProducts = productsData.length;
+  const totalProducts = productsData ? productsData.length : 0;
   const totalCategories = 3;
 
   return (
     <div className="home-container">
-      <h1 className="home-title">¡Hola Administrador!</h1>
+      <h1 className="home-title">¡Hola Administrador!</h1> 
 
       {/* Tarjeta de Productos */}
       <div className="dashboard-card">
