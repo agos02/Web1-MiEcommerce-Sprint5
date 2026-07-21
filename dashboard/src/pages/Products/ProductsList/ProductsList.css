@@ -222,7 +222,7 @@ body {
    ESTILOS RESPONSIVE PARA EL BONUS DE PANTALLAS PEQUEÑAS
    ========================================================================== */
 @media (max-width: 768px) {
-  /* Ocultamos el input grande por defecto en mobile */
+
   .input-busqueda-container {
     display: none;
   }

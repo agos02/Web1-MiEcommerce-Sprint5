@@ -73,7 +73,7 @@ const ProductView = () => {
   return (
     <div className="product-view-container" style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
       
-      {/* ENCABEZADO: Productos > #ID y Botón Eliminar a la derecha */}
+      {/* ENCABEZADO: Productos > ID y Botón Eliminar a la derecha */}
       <div className="product-header-nav" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
         <div className="breadcrumb" style={{ color: '#aaa', fontSize: '18px' }}>
           <span onClick={() => navigate('/products')} style={{ cursor: 'pointer' }}>Productos</span> 
@@ -157,9 +157,9 @@ const ProductView = () => {
           </form>
         </div>
       ) : (
-        /* MODO EDICIÓN (IDÉNTICO A LAS FOTOS DEL PROFESOR) */
+      
         <div>
-          {/* Tarjeta Resumen Superior */}
+        
           <div style={{ display: 'flex', alignItems: 'center', background: '#1e1e24', border: '1px solid #333', padding: '15px 20px', borderRadius: '12px', marginBottom: '25px', gap: '20px' }}>
             <img 
               src={foundProduct.image ? `/images/${foundProduct.image}` : '/images/fallback.png'} 
