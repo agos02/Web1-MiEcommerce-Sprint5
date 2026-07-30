@@ -8,9 +8,6 @@ import ProductsList from './pages/Products/ProductsList/ProductsList';
 import ProductView from './pages/Products/ProductView/ProductView';
 import Home from './pages/Home/Home';
 
-// Stubs temporales
-const CategoriesList = () => <h2 style={{ color: '#fff' }}>Categorías</h2>;
-
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -45,7 +42,8 @@ function App() {
               <Route path="/products" element={<ProductsList />} />
               <Route path="/products/new" element={<ProductView />} />
               <Route path="/products/:id" element={<ProductView />} />
-              <Route path="/categories" element={<CategoriesList />} />
+              <Route path="/categories" element={<categoriesList />} />
+              <Route path="/categories/new" element={<categoryView />} />
             </Routes>
           </section>
 

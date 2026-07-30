@@ -1,1 +1,58 @@
-import React from 'react'; const CategoriesList = () => <h1>Dashboard - Listado de Categor�as</h1>; export default CategoriesList;
+import React, { useEffect, useState } from 'react';
+import './CategoriesList.css';
+
+const CategoriesList = () => {
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Petición a la API de Categorías
+    fetch('http://localhost:3000/api/categories')
+      .then((res) => res.json())
+      .then((data) => {
+        setCategories(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error al cargar categorías:", err);
+        // Fallback temporal si la API aún no tiene el endpoint
+        setCategories([
+          { id: 1, name: 'Bebidas' },
+          { id: 2, name: 'Alimentos' },
+          { id: 3, name: 'Electrónica' }
+        ]);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <h2 style={{ color: '#fff', padding: '20px' }}>Cargando categorías...</h2>;
+  }
+
+  return (
+    <div style={{ padding: '20px', color: '#fff' }}>
+      <h1 style={{ fontSize: '1.8rem', marginBottom: '20px' }}>Categorías</h1>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
+        {categories.map((cat) => (
+          <div 
+            key={cat.id} 
+            style={{ 
+              background: '#26262b', 
+              padding: '20px', 
+              borderRadius: '10px', 
+              border: '1px solid #444',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}
+          >
+            <span style={{ fontSize: '1.5rem' }}>🏷️</span>
+            <span style={{ fontWeight: 'bold' }}>{cat.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CategoriesList;
