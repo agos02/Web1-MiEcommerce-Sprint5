@@ -62,7 +62,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         >
           <div className="user-avatar">👤</div>
           <div className="user-info">
-            <span className="user-name">Agostina</span>
+            <span className="user-name">Administrador</span>
             <span className="user-role">Ver perfil</span>
           </div>
         </Link>

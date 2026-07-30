@@ -39,7 +39,7 @@ const ProductView = () => {
           description: data.description || '',
           image: data.image || '',
           category: data.category || 'Alimentos', // Captura la categoría
-          store: data.category || 'Havanna SL'
+          store: data.store || 'Havanna SL'
         });
         setLoading(false);
       })
@@ -222,6 +222,20 @@ const ProductView = () => {
               required 
               style={{ width: '100%', padding: '10px', background: '#26262b', border: '1px solid #444', borderRadius: '8px', color: '#fff' }}
             />
+          </div>
+
+          <div className="form-group" style={{ marginBottom: '15px' }}>
+            <label style={{ display: 'block', color: '#aaa', marginBottom: '5px' }}>Categoría *</label>
+            <select
+              value={formData.category || 'Alimentos'}
+              onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+              required
+              style={{ width: '100%', padding: '10px', background: '#26262b', border: '1px solid #444', borderRadius: '8px', color: '#fff' }}
+            >
+              <option value="Alimentos">Alimentos</option>
+              <option value="Bebidas">Bebidas</option>
+              <option value="Electronica">Electrónica</option>
+            </select>
           </div>
 
           <div className="form-group" style={{ marginBottom: '15px' }}>

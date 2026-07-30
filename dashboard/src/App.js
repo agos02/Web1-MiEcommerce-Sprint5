@@ -42,8 +42,7 @@ function App() {
               <Route path="/products" element={<ProductsList />} />
               <Route path="/products/new" element={<ProductView />} />
               <Route path="/products/:id" element={<ProductView />} />
-              <Route path="/categories" element={<categoriesList />} />
-              <Route path="/categories/new" element={<categoryView />} />
+
             </Routes>
           </section>
 
