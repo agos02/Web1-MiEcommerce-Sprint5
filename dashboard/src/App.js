@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CategoryView from './pages/Categories/CategoryView/CategoryView';
+import CategoriesList from './pages/Categories/CategoriesList/CategoriesList'; // <-- IMPORTACIÓN FALTANTE
 import './App.css';
 
 // Componentes
@@ -7,6 +9,8 @@ import Sidebar from './components/Sidebar/Sidebar';
 import ProductsList from './pages/Products/ProductsList/ProductsList';
 import ProductView from './pages/Products/ProductView/ProductView';
 import Home from './pages/Home/Home';
+
+
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -42,6 +46,9 @@ function App() {
               <Route path="/products" element={<ProductsList />} />
               <Route path="/products/new" element={<ProductView />} />
               <Route path="/products/:id" element={<ProductView />} />
+              <Route path="/categories" element={<CategoriesList />} />
+              <Route path="/categories/:name" element={<CategoryView />} />
+              
 
             </Routes>
           </section>
